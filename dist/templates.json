@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Szablon zwykły #1",
+    "content": "Pacjent jest zdrów jak <strong>ryba</strong>!"
+  },
+  {
+    "id": 2,
+    "name": "Szablon lorem ipsum dolor sit amet zwykły #2",
+    "content": "Pacjent dostał rozwolnienia <strong>w trakcie wizyty</strong>..."
+  },
+  {
+    "id": 3,
+    "name": "Szablon dolor sit amet zwykły #3",
+    "content": "Pacjent <em>cudownie ozdrowiał</em>, <u>kij wie jakim cudem</u>."
+  },
+  {
+    "id": 4,
+    "name": "Szablon z shortcodeami #1",
+    "content": "<p>Pacjent jest podobny do <span class=\"ql-long-text\"><span class=\"ql-show\">wiadra rzygowin</span><span class=\"ql-dropdown\"><span class=\"ql-option\">Johna Travolty</span><span class=\"ql-option\">swojej własnej starej</span></span></span>.</p><p>Lorem ipsum dolor. <span class=\"ql-check-text\"><span class=\"ql-show ql-inactive\">Pacjent nie jest podobny do nikogo!</span></span>"
+  }
+]

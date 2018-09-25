@@ -1,0 +1,20 @@
+@import "~milligram-scss/src/milligram";
+@import "~font-awesome/scss/font-awesome";
+
+body {
+  background: #fafafa;
+}
+
+.container {
+  max-width: 900px;
+}
+
+h1, h2, h3 {
+  margin: 2rem 0 2rem;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 25px;
+}

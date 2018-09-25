@@ -1,0 +1,155 @@
+.ql-toolbar {
+  background: #efefef;
+
+  .ql-primary {
+    display: flex;
+  }
+
+  .ql-secondary {
+    display: none;
+    background: #e8e8e8;
+  }
+
+  &.ql-show-secondary {
+    .ql-secondary {
+      display: flex;
+    }
+    .secondary-toggle {
+      background: #e8e8e8;
+    }
+  }
+
+  .ql-separator {
+    flex: 0 0 12px;
+    display: flex;
+
+    &:before {
+      content: '';
+      margin: auto;
+      width: 0;
+      height: 60%;
+      border-left: 1px solid rgba(255,255,255,0.8);
+      border-right: 1px solid rgba(0,0,0,0.075);
+    }
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  .ql-spanner {
+    flex: 1 100%;
+    height: 40px;
+  }
+
+  .ql-button {
+    display: flex;
+    flex: 0 0 42px;
+    color: #828282;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    transition: color 0.4s, background-color 0.2s;
+
+    i {
+      margin: auto;
+    }
+
+    &:hover, &.active {
+      color: #484848;
+      background: #e8e8e8;
+    }
+  }
+
+  .ql-text-button {
+    @extend .ql-button;
+
+    i {
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 10px;
+    }
+  }
+
+  .ql-select {
+    position: relative;
+    display: flex;
+    color: #828282;
+    margin: 6px 0 0;
+    padding: 0;
+    height: 28px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+    background: #f4f4f4;
+    transition: color 0.4s, background-color 0.2s;
+
+    &:hover, &.active {
+      color: #484848;
+      background: #fcfcfc;
+    }
+
+    .ql-title {
+      flex: 1 100%;
+      padding-left: 10px;
+      line-height: 28px;
+      font-size: 10px;
+      font-weight: normal;
+      text-transform: none;
+      text-align: left;
+    }
+
+    .ql-icon {
+      flex: 0 0 42px;
+      display: flex;
+      height: 28px;
+
+      i { margin: auto; }
+    }
+
+    .ql-dropdown {
+      position: absolute;
+      display: none;
+      top: 100%;
+      left: -1px;
+      right: -1px;
+      max-height: 240px;
+      overflow-y: auto;
+      background: #f4f4f4;
+      border: 1px solid #e8e8e8;
+      z-index: 100;
+
+      .ql-option {
+        color: #828282;
+        padding: 6px 10px;
+        line-height: 24px;
+        font-size: 11px;
+        font-weight: normal;
+        text-align: left;
+        text-transform: none;
+        transition: color 0.1s, background-color 0.1s;
+
+        &:nth-child(even) {
+          background: #ececec;
+        }
+
+        &:hover {
+          color: white;
+          background: #8298ab;
+        }
+      }
+    }
+
+    &.active {
+      .ql-dropdown { display: block; }
+    }
+  }
+
+}

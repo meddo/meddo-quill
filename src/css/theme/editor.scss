@@ -1,0 +1,53 @@
+.ql-container {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+
+  .ql-editor {
+    box-sizing: border-box;
+    line-height: 1.42;
+    min-height: 180px;
+    outline: none;
+    padding: 4px 16px;
+    background: #ffffff;
+    tab-size: 4;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    > * {
+      cursor: text;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.ql-advanced {
+      .ql-simple-only { display: none !important; }
+    }
+
+    &:not(.ql-advanced) {
+      .ql-advanced-only { display: none !important; }
+    }
+  }
+
+  .ql-clipboard {
+    left: -100000px;
+    height: 1px;
+    overflow-y: hidden;
+    position: absolute;
+    top: 50%;
+  }
+
+}
+
+.ql-editor.ql-blank::before {
+  color: rgba(0,0,0,0.6);
+  content: attr(data-placeholder);
+  font-style: italic;
+  left: 15px;
+  pointer-events: none;
+  position: absolute;
+  right: 15px;
+}
