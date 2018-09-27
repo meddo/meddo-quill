@@ -2,6 +2,7 @@
   "name": "short-codes",
   "license": "UNLICENSED",
   "private": true,
+  "main": "src/js/meditor.js",
   "scripts": {
     "serve": "encore dev-server --hot",
     "dev": "encore dev",

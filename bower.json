@@ -1,0 +1,9 @@
+{
+  "name": "meditor",
+  "description": "Custom rich text editor control for meddo.",
+  "private": true,
+  "main": [
+    "src/css/meditor.scss",
+    "src/js/meditor.js"
+  ]
+}
