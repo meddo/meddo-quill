@@ -5,7 +5,7 @@ export default class CommandTool
     this.$name = name;
     this.$callable = callable;
 
-    this.$root = $(`<button class="ql-button ${name}" title="${tooltip}"><i class="fa fa-${icon}"></i></button>`);
+    this.$root = $(`<button type="button" class="ql-button ${name}" title="${tooltip}"><i class="fa fa-${icon}"></i></button>`);
   }
 
   render(row)

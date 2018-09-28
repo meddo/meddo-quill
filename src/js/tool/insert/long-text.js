@@ -5,7 +5,7 @@ export default class LongText
   constructor()
   {
     this.$root = $(`
-      <button class="ql-text-button long-text" title="Dodaj pole typu: długi tekst"><i class="fa fa-bars"></i><span>Tekst długi</span></button>
+      <button type="button" class="ql-text-button long-text" title="Dodaj pole typu: długi tekst"><i class="fa fa-bars"></i><span>Tekst długi</span></button>
     `);
   }
 

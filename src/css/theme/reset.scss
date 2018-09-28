@@ -1,0 +1,13 @@
+.ql-container {
+  button {
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    box-shadow: none;
+  }
+}

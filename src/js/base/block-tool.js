@@ -5,7 +5,7 @@ export default class BlockTool
     this.$format = format;
     this.$value = value;
 
-    this.$root = $(`<button class="ql-button ${format}" value="${value}" title="${tooltip}"><i class="fa fa-${icon}"></i></button>`);
+    this.$root = $(`<button type="button" class="ql-button ${format}" value="${value}" title="${tooltip}"><i class="fa fa-${icon}"></i></button>`);
   }
 
   render(row)

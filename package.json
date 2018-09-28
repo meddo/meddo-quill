@@ -1,6 +1,6 @@
 {
-  "name": "short-codes",
-  "license": "UNLICENSED",
+  "name": "meditor",
+  "description": "Custom rich text editor control for meddo.",
   "private": true,
   "main": "src/js/meditor.js",
   "scripts": {

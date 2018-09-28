@@ -3,7 +3,7 @@ export default class InlineTool
   constructor(icon, name, tooltip)
   {
     this.$name = name;
-    this.$root = $(`<button class="ql-button ${name}" title="${tooltip}"><i class="fa fa-${icon}"></i></button>`);
+    this.$root = $(`<button type="button" class="ql-button ${name}" title="${tooltip}"><i class="fa fa-${icon}"></i></button>`);
   }
 
   render(row)

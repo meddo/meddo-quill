@@ -3,6 +3,10 @@
   margin: 0;
   position: relative;
 
+  .ql-content {
+    display: none;
+  }
+
   .ql-editor {
     box-sizing: border-box;
     line-height: 1.42;
@@ -14,6 +18,8 @@
     text-align: left;
     white-space: pre-wrap;
     word-wrap: break-word;
+    border: 2px solid #efefef;
+    border-top: 2px solid transparent;
 
     > * {
       cursor: text;
@@ -40,14 +46,15 @@
     top: 50%;
   }
 
+  .ql-blank::before {
+    color: rgba(0,0,0,0.6);
+    content: attr(data-placeholder);
+    font-style: italic;
+    left: 15px;
+    pointer-events: none;
+    position: absolute;
+    right: 15px;
+  }
 }
 
-.ql-editor.ql-blank::before {
-  color: rgba(0,0,0,0.6);
-  content: attr(data-placeholder);
-  font-style: italic;
-  left: 15px;
-  pointer-events: none;
-  position: absolute;
-  right: 15px;
-}
+

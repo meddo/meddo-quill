@@ -5,7 +5,7 @@ export default class TemplateSelect
     this.$root = $(`<div class="ql-spanner"></div>`);
 
     this.$select = $(`
-      <button class="ql-select template-select" title="Wybór szablonu">
+      <button type="button" class="ql-select template-select" title="Wybór szablonu">
         <div class="ql-title">Wczytaj szablon</div>
         <div class="ql-icon"><i class="fa fa-chevron-down"></i></div>
       </button>
@@ -23,7 +23,11 @@ export default class TemplateSelect
   {
     this.$quill = quill;
     this.$resource = $(this.$quill.container).attr('data-template-resource');
-    $.ajax({url: this.$resource}).then(data => this.load(data));
+
+    if (this.$resource)
+    {
+      $.ajax({url: this.$resource}).then(data => this.load(data));
+    }
   }
 
   bind(toolbar)

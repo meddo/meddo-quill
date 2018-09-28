@@ -5,5 +5,9 @@
   "main": [
     "src/css/meditor.scss",
     "src/js/meditor.js"
+  ],
+  "ignore": [
+    "dist/index.html",
+    "dist/templates.json"
   ]
 }

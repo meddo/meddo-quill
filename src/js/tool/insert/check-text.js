@@ -5,7 +5,7 @@ export default class CheckText
   constructor()
   {
     this.$root = $(`
-      <button class="ql-text-button check-text" title="Dodaj pole typu: checkbox"><i class="fa fa-check-square-o"></i><span>Checkbox</span></button>
+      <button type="button" class="ql-text-button check-text" title="Dodaj pole typu: checkbox"><i class="fa fa-check-square-o"></i><span>Checkbox</span></button>
     `);
   }
 

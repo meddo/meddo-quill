@@ -5,7 +5,7 @@ export default class ShortText
   constructor()
   {
     this.$root = $(`
-      <button class="ql-text-button short-text" title="Dodaj pole typu: krótki tekst"><i class="fa fa-pencil"></i><span>Tekst krótki</span></button>
+      <button type="button" class="ql-text-button short-text" title="Dodaj pole typu: krótki tekst"><i class="fa fa-pencil"></i><span>Tekst krótki</span></button>
     `);
   }
 
