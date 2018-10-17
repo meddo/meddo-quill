@@ -15,7 +15,7 @@ Quill.register({
 
 window.meditor = function (el)
 {
-  return new Quill(el, {
+  let instance = new Quill(el, {
     modules: {
       toolbar: {
         primary: [
@@ -35,4 +35,7 @@ window.meditor = function (el)
       }
     }
   });
+
+  $(el).get(0).meditor = instance;
+  return instance;
 };
