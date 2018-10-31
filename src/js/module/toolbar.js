@@ -1,15 +1,17 @@
 import BaseModule from '../base/base-module';
 
-import Undo  from '../tool/command/undo';
-import Redo  from '../tool/command/redo';
+import Undo from '../tool/command/undo';
+import Redo from '../tool/command/redo';
 import Clear from '../tool/command/clear';
+import Speech from '../tool/command/speech';
 import More from '../tool/command/more';
 
-import Bold      from '../tool/inline/bold';
-import Italic    from '../tool/inline/italic';
+import Bold from '../tool/inline/bold';
+import Italic from '../tool/inline/italic';
 import Underline from '../tool/inline/underline';
+import LineHeight from '../tool/inline/line-height';
 
-import Subscript   from '../tool/block/subscript';
+import Subscript from '../tool/block/subscript';
 import Superscript from '../tool/block/superscript';
 
 import TemplateSelect from '../tool/custom/template-select';
@@ -22,10 +24,12 @@ let tools = {
   'undo': Undo,
   'redo': Redo,
   'clear': Clear,
+  'speech': Speech,
   'more': More,
   'bold': Bold,
   'italic': Italic,
   'underline': Underline,
+  'line-height': LineHeight,
   'subscript': Subscript,
   'superscript': Superscript,
   'template-select': TemplateSelect,

@@ -4,6 +4,7 @@ encore
   .setPublicPath('/assets')
   .setOutputPath('./dist/assets/')
 
+  .enableVueLoader()
   .enableSassLoader()
 
   .addEntry('meditor', './src/js/meditor.js')

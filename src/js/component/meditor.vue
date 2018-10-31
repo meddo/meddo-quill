@@ -1,13 +1,17 @@
 <template>
-  <div
-    class="meditor-component"
-  >
-    <div ref="editor" v-html="content"></div>
+  <div class="meditor-vue">
+    <div ref="editor"></div>
   </div>
 </template>
 
 <script>
   export default {
+    props: {
+      value: {
+        type: String,
+        default: ''
+      }
+    },
     data()
     {
       return {
@@ -16,12 +20,13 @@
     },
     mounted: function ()
     {
-      this.editor = $(this.$refs.editor).meditor();
-      this.editor.on('change', () => this.update());
+      this.editor = meditor(this.$refs.editor);
+      this.editor.setContent(this.value);
+      this.editor.on('text-change', () => this.update());
     },
     methods: {
       update: function() {
-        this.$emit('input', this.editor.getText() ? this.editor.root.innerHTML : '');
+        this.$emit('input', this.editor.getText() ? this.editor.getContent() : '');
       }
     }
   }

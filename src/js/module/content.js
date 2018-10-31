@@ -10,16 +10,23 @@ export default class Toolbar extends BaseModule
 
   initialize()
   {
+    this.$id = $(this.$quill.container).attr('data-id');
     this.$name = $(this.$quill.container).attr('data-name');
 
     this.$quill.getContent = () => this.getContent();
     this.$quill.setContent = content => this.setContent(content);
     this.$quill.appendContent = content => this.appendContent(content);
+    this.$quill.clearContent = () => this.clearContent();
 
-    this.$input = $(`<input class="ql-content" type="text" name="${this.$name}">`);
+    this.$input = $(`<input type="text" class="ql-content" id="${this.$id}" name="${this.$name}">`);
     this.$quill.on('text-change', () => this.updateContent());
 
     $(this.$quill.container).prepend(this.$input);
+  }
+
+  getContent()
+  {
+    return $(this.$quill.container).find('.ql-editor').html();
   }
 
   updateContent()
@@ -38,10 +45,14 @@ export default class Toolbar extends BaseModule
     {
       this.$quill.clipboard.dangerouslyPasteHTML(content);
     }
+    else
+    {
+      this.clearContent();
+    }
   }
 
-  getContent()
+  clearContent()
   {
-    return $(this.$quill.container).find('.ql-editor').html();
+    this.$quill.setContents([{insert: '\n'}]);
   }
 }
