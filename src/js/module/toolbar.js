@@ -9,6 +9,7 @@ import More from '../tool/command/more';
 import Bold from '../tool/inline/bold';
 import Italic from '../tool/inline/italic';
 import Underline from '../tool/inline/underline';
+import Strike from '../tool/inline/strike';
 import LineHeight from '../tool/inline/line-height';
 
 import Subscript from '../tool/block/subscript';
@@ -29,6 +30,7 @@ let tools = {
   'bold': Bold,
   'italic': Italic,
   'underline': Underline,
+  'strike': Strike,
   'line-height': LineHeight,
   'subscript': Subscript,
   'superscript': Superscript,

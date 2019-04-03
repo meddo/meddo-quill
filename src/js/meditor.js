@@ -22,7 +22,7 @@ window.meditor = function (el)
     modules: {
       toolbar: {
         primary: [
-          ['bold', 'italic', 'underline', 'line-height', 'subscript', 'superscript'],
+          ['bold', 'italic', 'underline', 'strike', 'line-height', 'subscript', 'superscript'],
           ['clear', 'undo', 'redo'],
           ['speech'],
           ['template-select'],
