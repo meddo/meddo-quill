@@ -19,8 +19,10 @@ export default class Toolbar extends BaseModule
     this.$quill.clearContent = () => this.clearContent();
 
     this.$input = $(`<input type="text" class="ql-content" id="${this.$id}" name="${this.$name}">`);
+    this.$preview = $(`<div class="ql-preview" id="${this.$id}-preview"></div>`);
     this.$quill.on('text-change', () => this.updateContent());
 
+    $(this.$quill.container).prepend(this.$preview);
     $(this.$quill.container).prepend(this.$input);
   }
 
@@ -32,6 +34,7 @@ export default class Toolbar extends BaseModule
   updateContent()
   {
     this.$input.val(this.getContent());
+    this.$preview.html(this.getContent());
   }
 
   appendContent(content)

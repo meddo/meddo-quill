@@ -1,0 +1,58 @@
+.ql-format-common {
+
+    .ql-show {
+        display: inline;
+    }
+
+    .ql-edit {
+        display: none;
+    }
+
+    .ql-editor & {
+        display: inline-block;
+        position: relative;
+        margin: 2px;
+        vertical-align: middle;
+
+        .ql-show {
+            display: none;
+        }
+
+        .ql-edit {
+            display: inline-flex;
+
+            .ql-input {
+                flex: 1 100%;
+                color: #626262;
+                margin: 0;
+                padding: 8px;
+                height: unset;
+                font-size: 12px;
+                border: none;
+                border-radius: 0;
+                background: #e8e8e8;
+            }
+
+            .ql-button {
+                color: #686868;
+                display: flex;
+                flex: 0 0 30px;
+                cursor: pointer;
+                width: 30px;
+                font-size: 14px;
+                background: #dadada;
+                transition: background-color 0.2s;
+
+                i {
+                    margin: auto;
+                }
+
+                &:hover {
+                    background: #c8c8c8;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,74 @@
+.ql-check-text {
+    @extend .ql-format-common;
+
+    .ql-show {
+        &.ql-inactive {
+            display: none;
+        }
+    }
+
+    .ql-edit {
+        width: 170px;
+    }
+
+    .ql-toggle {
+        display: none;
+    }
+
+    .ql-editor & {
+
+        .ql-toggle {
+            cursor: pointer;
+            font-size: 12px;
+            display: inline-block;
+            padding: 2px 8px;
+            color: white;
+            background: #8298ab;
+
+            &.ql-inactive {
+                color: #8c8c8c;
+                background: #e8e8e8;
+            }
+        }
+
+        .ql-checkbox {
+            position: relative;
+            color: #686868;
+            background: #dadada;
+            flex: 0 0 32px;
+            display: flex;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background: #c8c8c8;
+            }
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &.ql-on {
+                    color: #476d38;
+                }
+
+                &.ql-off {
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid #8f8f8f;
+                    background: #dfdfdf;
+                }
+            }
+
+            &.ql-inactive {
+                .ql-on {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}

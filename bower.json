@@ -7,8 +7,6 @@
     "src/js/meditor.js"
   ],
   "ignore": [
-    "src/css",
-    "src/js",
     "dist/index.html",
     "dist/templates.json"
   ]

@@ -1,0 +1,7 @@
+.ql-short-text {
+    @extend .ql-format-common;
+
+    .ql-edit {
+        width: 80px;
+    }
+}

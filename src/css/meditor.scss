@@ -1,4 +1,7 @@
 @import "theme/reset";
 @import "theme/editor";
 @import "theme/toolbar";
-@import "theme/format";
+@import "theme/common";
+@import "theme/format/check-text";
+@import "theme/format/short-text";
+@import "theme/format/long-text";

@@ -22,8 +22,7 @@ window.meditor = function (el)
     modules: {
       toolbar: {
         primary: [
-          ['bold', 'italic', 'underline', 'line-height'],
-          ['subscript', 'superscript'],
+          ['bold', 'italic', 'underline', 'line-height', 'subscript', 'superscript'],
           ['clear', 'undo', 'redo'],
           ['speech'],
           ['template-select'],
@@ -44,6 +43,6 @@ window.meditor = function (el)
   return instance;
 };
 
-if (Vue !== undefined) {
+if (typeof Vue !== 'undefined') {
   Vue.component('meditor', MeditorVue);
 }
