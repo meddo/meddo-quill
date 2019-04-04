@@ -4,7 +4,7 @@ export default class Clear extends CommandTool
 {
   constructor()
   {
-    super('remove', 'clear', 'Usuń formatowanie', function (quill)
+    super('eraser', 'clear', 'Usuń formatowanie', function (quill)
     {
       quill.removeFormat(quill.getSelection());
     });

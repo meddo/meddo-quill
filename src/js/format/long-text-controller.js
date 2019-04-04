@@ -74,8 +74,7 @@ export default class LongTextController extends BaseController
   {
     return $(`
       <span class="ql-button ql-dropdown-toggle" title="Pokaż opcje">
-        <i class="fa fa-chevron-down ql-simple-only"></i>
-        <i class="fa fa-cogs ql-advanced-only"></i>
+        <i class="fa fa-chevron-down"></i>
       </span>
     `);
   }
