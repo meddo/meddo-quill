@@ -6,7 +6,7 @@ export default class Clear extends CommandTool
   {
     super('magic', 'secondary-toggle', 'Zaawansowane', function ()
     {
-      $(this.$quill.root).toggleClass('ql-advanced');
+      $(this.$quill.container).toggleClass('ql-advanced');
       this.$toolbar.toggleClass('ql-show-secondary');
     });
   }

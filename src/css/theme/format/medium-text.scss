@@ -1,7 +1,7 @@
-.ql-long-text {
+.ql-medium-text {
     @extend .ql-format-common;
 
     .ql-edit {
-        width: 200px;
+        width: 120px;
     }
 }

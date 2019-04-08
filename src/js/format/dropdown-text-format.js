@@ -1,8 +1,8 @@
 import Quill from 'quill';
-import Controller from './long-text-controller';
+import Controller from './dropdown-text-controller';
 const InlineEmbed = Quill.import('blots/embed');
 
-export default class LongTextFormat extends InlineEmbed
+export default class DropdownTextFormat extends InlineEmbed
 {
   constructor(node) {
     super(node);
@@ -19,7 +19,8 @@ export default class LongTextFormat extends InlineEmbed
   static value(node)
   {
     return {
-      text: Controller.findText(node)
+      text: Controller.findText(node),
+      options: Controller.findOptions(node)
     }
   }
 
@@ -28,6 +29,6 @@ export default class LongTextFormat extends InlineEmbed
   }
 }
 
-LongTextFormat.tagName = 'span';
-LongTextFormat.blotName = 'long-text';
-LongTextFormat.className = 'ql-long-text';
+DropdownTextFormat.tagName = 'span';
+DropdownTextFormat.blotName = 'dropdown-text';
+DropdownTextFormat.className = 'ql-dropdown-text';

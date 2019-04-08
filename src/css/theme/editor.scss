@@ -11,6 +11,31 @@
     display: none;
   }
 
+  .ql-statusbar {
+    cursor: default;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #efefef;
+
+    p {
+      color: #c0c7cd;
+      display: block;
+      margin: 0;
+      padding: 6px 18px 2px;
+      font-size: 10px;
+    }
+  }
+
+  &.ql-advanced {
+    .ql-simple-only { display: none !important; }
+  }
+
+  &:not(.ql-advanced) {
+    .ql-advanced-only { display: none !important; }
+  }
+
   .ql-editor {
     box-sizing: border-box;
     line-height: 1.42;
@@ -33,12 +58,11 @@
       outline: none;
     }
 
-    &.ql-advanced {
-      .ql-simple-only { display: none !important; }
-    }
+  }
 
-    &:not(.ql-advanced) {
-      .ql-advanced-only { display: none !important; }
+  &.ql-advanced {
+    .ql-editor {
+      padding-bottom: 36px;
     }
   }
 

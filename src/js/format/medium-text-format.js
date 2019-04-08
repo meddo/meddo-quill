@@ -1,8 +1,8 @@
 import Quill from 'quill';
-import Controller from './long-text-controller';
+import Controller from './medium-text-controller';
 const InlineEmbed = Quill.import('blots/embed');
 
-export default class LongTextFormat extends InlineEmbed
+export default class MediumTextFormat extends InlineEmbed
 {
   constructor(node) {
     super(node);
@@ -28,6 +28,6 @@ export default class LongTextFormat extends InlineEmbed
   }
 }
 
-LongTextFormat.tagName = 'span';
-LongTextFormat.blotName = 'long-text';
-LongTextFormat.className = 'ql-long-text';
+MediumTextFormat.tagName = 'span';
+MediumTextFormat.blotName = 'medium-text';
+MediumTextFormat.className = 'ql-medium-text';

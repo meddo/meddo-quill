@@ -2,6 +2,10 @@
     @extend .ql-format-common;
 
     .ql-edit {
-        width: 80px;
+        width: 40px;
+    }
+
+    .ql-advanced & .ql-edit {
+        width: 70px;
     }
 }

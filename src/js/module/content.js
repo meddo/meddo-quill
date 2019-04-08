@@ -1,6 +1,6 @@
 import BaseModule from '../base/base-module';
 
-export default class Toolbar extends BaseModule
+export default class Content extends BaseModule
 {
   constructor(quill, options)
   {

@@ -24,10 +24,11 @@
             padding: 6px 8px;
             color: white;
             background: #8298ab;
+            box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.075);
 
             &.ql-inactive {
-                color: #8c8c8c;
-                background: #e8e8e8;
+                color: #b2b2b2;
+                background: #e4e4e4;
             }
         }
 

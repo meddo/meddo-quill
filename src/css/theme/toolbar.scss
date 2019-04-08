@@ -9,12 +9,17 @@
     .ql-secondary {
       display: none;
       background: #e8e8e8;
+
+      .ql-separator {
+        margin-left: 12px;
+      }
     }
 
     &.ql-show-secondary {
       .ql-secondary {
         display: flex;
       }
+
       .secondary-toggle {
         background: #e8e8e8;
       }
@@ -35,6 +40,21 @@
 
       &:last-child {
         display: none;
+      }
+    }
+
+    .ql-label {
+      cursor: default;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      height: 40px;
+
+      span {
+        color: #7f7f7f;
+        font-size: 10px;
+        margin-top: 12px;
+        margin-left: 12px;
       }
     }
 
@@ -60,7 +80,8 @@
         margin: auto;
       }
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: #484848;
         background: #e8e8e8;
       }
@@ -97,7 +118,8 @@
       background: #f4f4f4;
       transition: color 0.4s, background-color 0.2s;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: #484848;
         background: #fcfcfc;
       }

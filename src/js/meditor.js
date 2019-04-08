@@ -1,18 +1,24 @@
 import Quill from 'quill';
-import Input from './module/content';
+import MeditorVue from './component/meditor';
+import Content from './module/content';
 import Toolbar from './module/toolbar';
+import Statusbar from './module/statusbar';
 import LineHeight from './format/line-height-format';
 import CheckText from './format/check-text-format';
+import DropdownText from './format/dropdown-text-format';
 import ShortText from './format/short-text-format';
+import MediumText from './format/medium-text-format';
 import LongText from './format/long-text-format';
-import MeditorVue from './component/meditor';
 
 Quill.register({
-  'modules/input': Input,
+  'modules/content': Content,
   'modules/toolbar': Toolbar,
+  'modules/statusbar': Statusbar,
   'formats/line-height': LineHeight,
   'formats/check-text': CheckText,
+  'formats/dropdown-text': DropdownText,
   'formats/short-text': ShortText,
+  'formats/medium-text': MediumText,
   'formats/long-text': LongText,
 }, true);
 
@@ -29,10 +35,12 @@ window.meditor = function (el)
           ['more'],
         ],
         secondary: [
-          ['check-text', 'short-text', 'long-text']
+          ['check-text', 'dropdown-text'],
+          [{label: 'TEKST:'}, 'short-text', 'medium-text', 'long-text'],
         ]
       },
-      input: true,
+      content: true,
+      statusbar: true,
       clipboard: {
         matchVisual: false,
       }

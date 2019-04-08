@@ -1,0 +1,84 @@
+.ql-dropdown-text {
+    @extend .ql-format-common;
+
+    .ql-edit {
+        width: 340px;
+    }
+
+    .ql-dropdown {
+        display: none;
+    }
+
+    .ql-editor & {
+
+        .ql-dropdown {
+            position: absolute;
+            display: none;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 240px;
+            overflow-y: auto;
+            z-index: 10;
+
+            .ql-option {
+                display: flex;
+                cursor: pointer;
+                font-size: 12px;
+                background: #c8c8c8;
+                transition: color 0.1s, background-color 0.1s;
+
+                &:nth-child(even) {
+                    background: #d0d0d0;
+                }
+
+                &:hover {
+                    color: white;
+                    background: #8298ab;
+                }
+
+                .ql-title {
+                    flex: 1 100%;
+                    padding: 4px 8px;
+                }
+
+                .ql-button {
+                    color: #afafaf;
+                    display: flex;
+                    flex: 0 0 31px;
+                    cursor: pointer;
+                    width: 30px;
+                    font-size: 14px;
+                    transition: color 0.1s;
+
+                    i {
+                        margin: auto;
+                    }
+                }
+
+                &:hover {
+                    .ql-button {
+                        color: #b74d4d;
+                    }
+                }
+            }
+        }
+
+        &.ql-show-dropdown {
+            .ql-dropdown {
+                display: block;
+            }
+
+            .ql-dropdown-toggle {
+                background: #c8c8c8;
+            }
+        }
+
+        &:not(.ql-show-dropdown) {
+            .ql-when-dropdown-only {
+                display: none;
+            }
+        }
+
+    }
+}
