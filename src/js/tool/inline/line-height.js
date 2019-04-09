@@ -4,6 +4,6 @@ export default class Bold extends InlineTool
 {
   constructor()
   {
-    super('bars', 'line-height', 'Większa interlinia');
+    super('text-height', 'line-height', 'Większa interlinia');
   }
 }

@@ -19,7 +19,7 @@ export default class Statusbar extends BaseModule
   {
     return $(`
       <div class="ql-statusbar ql-advanced-only">
-        <p>Tryb edycji pól szablonu...</p>
+        <p>Tryb edycji pól szablonów</p>
       </div>
     `);
   }

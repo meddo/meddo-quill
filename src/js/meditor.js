@@ -28,7 +28,7 @@ window.meditor = function (el)
     modules: {
       toolbar: {
         primary: [
-          ['bold', 'italic', 'underline', 'strike', 'line-height', 'subscript', 'superscript'],
+          ['bold', 'italic', 'underline', 'strike', 'subscript', 'superscript', 'line-height'],
           ['clear', 'undo', 'redo'],
           ['speech'],
           ['template-select'],
@@ -36,7 +36,7 @@ window.meditor = function (el)
         ],
         secondary: [
           ['check-text', 'dropdown-text'],
-          [{label: 'TEKST:'}, 'short-text', 'medium-text', 'long-text'],
+          [{label: 'Tekst:'}, 'short-text', 'medium-text', 'long-text'],
         ]
       },
       content: true,
