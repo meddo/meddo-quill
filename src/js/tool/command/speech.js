@@ -15,7 +15,7 @@ export default class Speech extends CommandTool
     {
       this.$recognition = new webkitSpeechRecognition();
       this.$recognition.lang = 'pl-PL';
-      this.$recognition.continous = true;
+      this.$recognition.continuous = true;
       this.$recognition.onresult = (e) => this.apply(e);
     }
     catch (e)
