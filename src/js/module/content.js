@@ -19,11 +19,11 @@ export default class Content extends BaseModule
     this.$quill.clearContent = () => this.clearContent();
 
     this.$preview = $(`<div class="ql-preview"></div>`);
-    this.$input = $(`<input type="text" class="ql-content" id="${this.$id}" name="${this.$name}">`);    
+    this.$input = $(`<input type="text" class="ql-content" id="${this.$id}" name="${this.$name}">`);
     this.$quill.on('text-change', () => this.updateContent());
 
     $(this.$quill.container).prepend(this.$input);
-    $(this.$quill.container).prepend(this.$preview);    
+    $(this.$quill.container).prepend(this.$preview);
   }
 
   getContent()
@@ -39,7 +39,7 @@ export default class Content extends BaseModule
 
   appendContent(content)
   {
-    this.setContent(this.getContent() + "\n" + content);
+    this.setContent(this.getContent() + content);
   }
 
   setContent(content)
