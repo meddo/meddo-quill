@@ -1,6 +1,6 @@
 {
   "name": "meditor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom rich text editor control for meddo.",
   "private": true,
   "main": "src/js/meditor.js",
