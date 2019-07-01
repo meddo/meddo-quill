@@ -16,6 +16,11 @@ export default class BaseController
     this.$input.on('input', (e) => this.update($(e.currentTarget).val()));
 
     this.update(this.$display.text());
+
+    let input = this.$input;
+    setTimeout(function() {
+      input.focus();
+    }, 0);
   }
 
   update(text)

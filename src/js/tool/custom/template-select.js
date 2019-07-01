@@ -45,6 +45,8 @@ export default class TemplateSelect
   select(id)
   {
     this.$quill.clipboard.dangerouslyPasteHTML(this.$options.find(option => option.id === id).content);
+    let quill = this.$quill;
+    setTimeout(function() {quill.setSelection(quill.getLength());}, 0)
   }
 
   load(data)
