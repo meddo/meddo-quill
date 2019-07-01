@@ -52,6 +52,9 @@ export default class Speech extends CommandTool
 
   apply(event)
   {
-    this.$quill.appendContent(event.results[event.results.length-1][0].transcript);
+    let selection = this.$quill.getSelection(true);
+    let cursorPosition = selection.index + selection.length;
+
+    this.$quill.insertText(cursorPosition, event.results[event.results.length-1][0].transcript);
   }
 }
