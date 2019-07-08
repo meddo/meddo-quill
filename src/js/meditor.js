@@ -9,6 +9,7 @@ import DropdownText from './format/dropdown-text-format';
 import ShortText from './format/short-text-format';
 import MediumText from './format/medium-text-format';
 import LongText from './format/long-text-format';
+import InterimSpeech from './blot/interim-speech';
 
 Quill.register({
   'modules/content': Content,
@@ -20,6 +21,7 @@ Quill.register({
   'formats/short-text': ShortText,
   'formats/medium-text': MediumText,
   'formats/long-text': LongText,
+  'blots/interim-speech': InterimSpeech,
 }, true);
 
 window.meditor = function (el)

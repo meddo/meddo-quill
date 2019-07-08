@@ -19,7 +19,7 @@ export default class Content extends BaseModule
     this.$quill.clearContent = () => this.clearContent();
 
     this.$preview = $(`<div class="ql-preview"></div>`);
-    this.$input = $(`<input type="text" class="ql-content" id="${this.$id}" name="${this.$name}">`);
+    this.$input = $(`<textarea class="ql-content" id="${this.$id}" name="${this.$name}">`);
     this.$quill.on('text-change', () => this.updateContent());
 
     $(this.$quill.container).prepend(this.$input);
