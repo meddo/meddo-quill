@@ -63,19 +63,11 @@ export default class DropdownTextController extends BaseController
 
   createAddBtn()
   {
-    return $(`
-      <span class="ql-button ql-advanced-only ql-when-dropdown-only" title="Zapisz wartość">
-        <i class="fa fa-plus-circle"></i>
-      </span>
-    `);
+    return $(`<span class="ql-button ql-advanced-only ql-when-dropdown-only" title="Zapisz wartość"><i class="fa fa-plus-circle"></i></span>`);
   }
 
   createDropdownBtn()
   {
-    return $(`
-      <span class="ql-button ql-dropdown-toggle" title="Pokaż opcje">
-        <i class="fa fa-chevron-down"></i>
-      </span>
-    `);
+    return $(`<span class="ql-button ql-dropdown-toggle" title="Pokaż opcje"><i class="fa fa-chevron-down"></i></span>`);
   }
 }

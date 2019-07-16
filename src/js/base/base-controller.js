@@ -46,10 +46,6 @@ export default class BaseController
 
   createRemoveBtn()
   {
-    return $(`
-      <span class="ql-button ql-advanced-only" title="Usuń pole">
-        <i class="fa fa-times"></i>
-      </span>
-    `);
+    return $(`<span class="ql-button ql-advanced-only" title="Usuń pole"><i class="fa fa-times"></i></span>`);
   }
 }

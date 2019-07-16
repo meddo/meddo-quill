@@ -74,6 +74,7 @@ export default class Speech extends CommandTool {
 
             let selection = this.$quill.getSelection(true);
             let cursorPosition = selection.index + selection.length;
+            // tip: insertować w trybie modelu danych quilla
             this.$quill.insertText(cursorPosition, speechTranscript);
         }
     }

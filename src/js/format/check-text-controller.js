@@ -48,11 +48,6 @@ export default class CheckTextController extends BaseController
 
   createCheckbox()
   {
-    return $(`
-      <span class="ql-checkbox">
-        <i class="ql-off"></i>
-        <i class="fa fa-check ql-on"></i>      
-      </span>
-    `);
+    return $(`<span class="ql-checkbox"><i class="ql-off"></i><i class="fa fa-check ql-on"></i></span>`);
   }
 }
