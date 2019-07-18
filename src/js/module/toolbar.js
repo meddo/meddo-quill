@@ -12,6 +12,8 @@ import Underline from '../tool/inline/underline';
 import Strike from '../tool/inline/strike';
 import LineHeight from '../tool/inline/line-height';
 
+import ListUL from '../tool/block/list-ul';
+import ListOL from '../tool/block/list-ol';
 import Subscript from '../tool/block/subscript';
 import Superscript from '../tool/block/superscript';
 
@@ -22,9 +24,7 @@ import DropdownText from '../tool/insert/dropdown-text';
 import ShortText from '../tool/insert/short-text';
 import MediumText from '../tool/insert/medium-text';
 import LongText from '../tool/insert/long-text';
-import {
-  type
-} from 'os';
+import { type } from 'os';
 
 let tools = {
   'undo': Undo,
@@ -37,6 +37,8 @@ let tools = {
   'underline': Underline,
   'strike': Strike,
   'line-height': LineHeight,
+  'list-ul': ListUL,
+  'list-ol': ListOL,
   'subscript': Subscript,
   'superscript': Superscript,
   'template-select': TemplateSelect,

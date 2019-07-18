@@ -29,6 +29,7 @@ window.meditor = function (el)
       toolbar: {
         primary: [
           ['bold', 'italic', 'underline', 'strike', 'subscript', 'superscript', 'line-height'],
+          ['list-ul', 'list-ol'],
           ['clear', 'undo', 'redo'],
           ['speech'],
           ['template-select'],
