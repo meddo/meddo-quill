@@ -34,7 +34,7 @@ export default class Content extends BaseModule
   updateContent()
   {
     this.$input.val(this.getContent());
-    this.$input.onchange();
+    this.$input.trigger('change');
 
     this.$preview.html(this.getContent());
   }
