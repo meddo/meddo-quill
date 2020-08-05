@@ -11,7 +11,6 @@ export default class Statusbar extends BaseModule
   initialize()
   {
     this.$status = this.createStatusbar();
-    console.log('appending');
     $(this.$quill.container).append(this.$status);
   }
 
