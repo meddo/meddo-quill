@@ -27,7 +27,7 @@ Quill.register({
   'blots/smart-break': SmartBreak,
 }, true);
 
-window.meditor = function (el) {
+meditor = function (el) {
   let instance = new Quill(el, {
     modules: {
       toolbar: {
@@ -95,3 +95,6 @@ window.meditor = function (el) {
 if (typeof Vue !== 'undefined') {
   Vue.component('meditor', MeditorVue);
 }
+
+window.meditor = meditor;
+export default meditor;
