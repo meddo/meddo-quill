@@ -5,7 +5,9 @@ encore
   .setOutputPath('./dist/assets/')
 
   .enableVueLoader()
-  .enableSassLoader()
+  .enableSassLoader(options => {
+    options.implementation = require('sass');
+  })
 
   .addEntry('meditor', './src/js/meditor.js')
   .addStyleEntry('meditor-theme', './src/css/meditor.scss')
@@ -17,6 +19,7 @@ encore
   .enableBuildNotifications()
 
   .enableVersioning(false)
+  .enableSingleRuntimeChunk()
   .enableSourceMaps(!encore.isProduction())
 ;
 

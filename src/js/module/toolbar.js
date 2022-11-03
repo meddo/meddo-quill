@@ -24,7 +24,6 @@ import DropdownText from '../tool/insert/dropdown-text';
 import ShortText from '../tool/insert/short-text';
 import MediumText from '../tool/insert/medium-text';
 import LongText from '../tool/insert/long-text';
-import { type } from 'os';
 
 let tools = {
   'undo': Undo,
