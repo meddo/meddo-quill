@@ -5,24 +5,28 @@
   "private": true,
   "main": "src/js/meditor.js",
   "scripts": {
-    "serve": "encore dev-server --hot",
+    "serve": "encore dev-server --hot --port 8082",
     "dev": "encore dev",
     "watch": "encore dev --watch",
     "build": "encore production"
   },
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.20.1",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@symfony/webpack-encore": "^4.1.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
     "milligram-scss": "^1.3.0",
-    "node-sass": "^4.9.3",
     "quill": "^1.3.6",
-    "sass-loader": "^7.1.0",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
     "webpack-notifier": "^1.6.0"
   },
   "dependencies": {
-    "vue": "^2.5.17",
-    "vue-loader": "^14.2.3",
-    "vue-template-compiler": "^2.5.17"
+    "vue": "^2.5.22",
+    "vue-loader": "^15.10.0",
+    "vue-template-compiler": "^2.5.22"
   }
 }
