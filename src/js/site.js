@@ -1,3 +1,4 @@
+import './meditor';
 import $ from "jquery";
 
 window.$ = $;
@@ -5,4 +6,3 @@ window.$ = $;
 $(function() {
   meditor($('#meditor').get(0));
 });
-

@@ -15,11 +15,16 @@ encore
   .addEntry('site', './src/js/site.js')
   .addStyleEntry('site-theme', './src/css/site.scss')
 
+  .configureBabelPresetEnv((config) => {
+    config.useBuiltIns = 'entry';
+    config.corejs = 3;
+  })
+
   .cleanupOutputBeforeBuild()
   .enableBuildNotifications()
 
+  .disableSingleRuntimeChunk()
   .enableVersioning(false)
-  .enableSingleRuntimeChunk()
   .enableSourceMaps(!encore.isProduction())
 ;
 
