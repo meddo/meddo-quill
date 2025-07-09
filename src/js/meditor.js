@@ -10,8 +10,11 @@ import ShortText from './format/short-text-format';
 import MediumText from './format/medium-text-format';
 import LongText from './format/long-text-format';
 import InterimSpeech from './blot/interim-speech';
-import SmartBreak from './blot/smart-break';
-import newlineMatcher from './matcher/newline-matcher';
+import SoftBreak from './blot/soft-break';
+import brMatcher from './matcher/br-matcher';
+import divMatcher from './matcher/div-matcher';
+import spanMatcher from './matcher/span-matcher';
+import paragraphMatcher from "./matcher/paragraph-matcher";
 
 Quill.register({
   'modules/content': Content,
@@ -24,7 +27,7 @@ Quill.register({
   'formats/medium-text': MediumText,
   'formats/long-text': LongText,
   'blots/interim-speech': InterimSpeech,
-  'blots/smart-break': SmartBreak,
+  'blots/soft-break': SoftBreak,
 }, true);
 
 window.meditor = function (el) {
@@ -49,7 +52,10 @@ window.meditor = function (el) {
       clipboard: {
         matchVisual: false,
         matchers: [
-          ['BR', newlineMatcher]
+          ['BR', brMatcher],
+          ['DIV', divMatcher],
+          ['SPAN', spanMatcher],
+          ['P', paragraphMatcher]
         ]
       },
       keyboard: {
@@ -62,12 +68,12 @@ window.meditor = function (el) {
               let currentLeaf = this.quill.getLeaf(range.index)[0];
               let nextLeaf = this.quill.getLeaf(range.index + 1)[0];
 
-              this.quill.insertEmbed(range.index, 'smartbreak', true, 'user');
+              this.quill.insertEmbed(range.index, 'softbreak', true, 'user');
 
               // Insert a second break if:
               // At the end of the editor, OR next leaf has a different parent (<p>)
-              if (nextLeaf === null || (currentLeaf.parent !== nextLeaf.parent)) {
-                this.quill.insertEmbed(range.index, 'smartbreak', true, 'user');
+              if (nextLeaf === null || currentLeaf.parent !== nextLeaf.parent) {
+                this.quill.insertEmbed(range.index, 'softbreak', true, 'user');
               }
 
               // Now that we've inserted a line break, move the cursor forward
