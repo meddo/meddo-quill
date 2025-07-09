@@ -4,6 +4,9 @@
 
 ## Getting started
 
+Requires nodejs v-14
+(probably won't work with anything different).
+
 1. `git clone`
 2. `npm install` or `yarn install`
 2. `npm run serve`
@@ -13,4 +16,3 @@
 
 1. `npm run build`
 2. `git commit [...]`
-
