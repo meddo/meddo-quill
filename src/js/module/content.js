@@ -55,7 +55,13 @@ export default class Content extends BaseModule
       this.clearContent();
     }
 
-    this.$quill.setSelection(this.$quill.getLength(), 0)
+    if (document.activeElement && document.activeElement !== document.body) {
+      document.activeElement.blur();
+    }
+
+    setTimeout(() => {
+      this.$quill.setSelection(this.$quill.getLength(), 0);
+    }, 10);
   }
 
   clearContent()
