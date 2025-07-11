@@ -3,6 +3,5 @@ import $ from "jquery";
 window.$ = $;
 
 $(function() {
-  meditor($('#meditor').get(0));
+  window.instance = meditor($('#meditor').get(0));
 });
-

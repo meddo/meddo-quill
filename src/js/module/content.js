@@ -54,6 +54,8 @@ export default class Content extends BaseModule
     {
       this.clearContent();
     }
+
+    this.$quill.setSelection(this.$quill.getLength(), 0)
   }
 
   clearContent()
